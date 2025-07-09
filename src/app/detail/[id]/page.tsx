@@ -63,7 +63,7 @@ export default function DetailPage({ params }: { params: Promise<{ id: string }>
   return (
         <section className="h-full">
             <div className="pt-10 lg:px-30 md:px-20 sm:px-15 px-8">
-                <h2 className={`${poppinsSB.className} text-[#372415]  flex justify-center text-center lg:text-[32px] md:text-[32px] sm:text-[32px] text-[24px]`}>Deangan harga {harga} anda akan mendapatkan</h2>
+                <h2 className={`${poppinsSB.className} text-[#372415]  flex justify-center text-center lg:text-[32px] md:text-[32px] sm:text-[32px] text-[24px]`}>Deangan harga Rp. {harga} anda akan mendapatkan</h2>
                 <div className="px-4 py-4 rounded-md border border-[#835A3C] mt-4 flex-shrink-0 lg:text-[16px] md:text-[15px] sm:text-[14px] text-[14px]">
                     {desc.map((item, index) => (
                         <div className={`${poppins.className} text-[#372415] flex gap-3 pb-1`} key={index}>

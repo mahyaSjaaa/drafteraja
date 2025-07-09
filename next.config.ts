@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+      images: {
+    domains: ['zqksipwraavhujicsndu.supabase.co'],
+  },
   async headers() {
     const securityHeaders = [
       {

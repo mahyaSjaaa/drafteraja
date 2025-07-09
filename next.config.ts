@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
           script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vercel.app;
           style-src 'self' 'unsafe-inline' fonts.googleapis.com;
           font-src 'self' fonts.gstatic.com data:;
-          img-src 'self' data: blob:;
+          img-src 'self' data: blob: zqksipwraavhujicsndu.supabase.co;
           connect-src *;
         `.replace(/\n/g, ""),
       },

@@ -3,6 +3,7 @@ import { poppins, poppinsSB } from "@/fonts/font"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 type Navbar = {
     notelp:string
@@ -19,9 +20,18 @@ export default function Navbar({notelp}:Navbar) {
         <nav className="relative z-40">
             <div className="fixed top-0 right-0 left-0">
                 <div className={`${poppins.className} flex justify-between px-10 py-4 bg-[#372415] rounded-b-xl shadow-lg/10`}>
-                <p className={`${poppinsSB.className} sm:text-[15px] text-[14px] md:text-[16px] lg:text-[18px] text-[#D0CECB] lg:mt-[2px] md:mt-[4px] sm:mt-[4px] mt-[4px]`}>
-                    drafteraja
-                </p>
+                    <div className="flex items-center gap-2">
+                    <Image
+                        src="/logo.png"
+                        alt="Logo Drafteraja"
+                        width={24}
+                        height={24}
+                        className="object-contain"
+                    />
+                    <p className={`${poppinsSB.className} sm:text-[15px] text-[14px] md:text-[16px] lg:text-[18px] text-[#D0CECB] leading-none`}>
+                        drafteraja
+                    </p>
+                    </div>
                 <div className="flex justify-between lg:w-120 sm:mt-1 sm:w-80 w-45 text-[#D0CECB] lg:flex md:flex hidden">
                     <Link href="/#home" className="transition ease-in-out duration-200 hover:scale-110 sm:text-[13px] text-[11px] md:text-[16px] lg:text-[16px]">Home</Link>
                     <Link href="/#about" className="transition ease-in-out duration-200 hover:scale-110 sm:text-[13px] text-[11px] md:text-[16px] lg:text-[16px]">About</Link>

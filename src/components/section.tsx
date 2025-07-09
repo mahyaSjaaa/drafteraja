@@ -45,17 +45,17 @@ export default function Section( {about, notelp}:Main) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data, error } = await supabase.from('portofolio').select('*')
+            const { data, error } = await supabase.from('portofolio').select('*').order('id', { ascending: false })
             if (error) console.error(error)
                 else setData(data)
         }
         const fetchDataTesti = async () => {
-            const { data, error } = await supabase.from('testimoni').select('*')
+            const { data, error } = await supabase.from('testimoni').select('*').order('id', { ascending: false })
             if (error) console.error(error)
                 else setDataTesti(data)
         }
         const fetchDataProduct = async () => {
-            const { data, error } = await supabase.from('product').select('*')
+            const { data, error } = await supabase.from('product').select('*').order('id', { ascending: false })
             if (error) console.error(error)
                 else setDataProduct(data)
         }
